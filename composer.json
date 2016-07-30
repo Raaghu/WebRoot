@@ -1,0 +1,36 @@
+{
+	"name" : "icircle/webcore",
+	"description" : "This is a Core Project for all UI projects",
+	"type" : "library",
+	"homepage" : "http://icircle.xyz/developer/webcore",
+	"license" : "icircle",
+	"minimum-stability" : "dev",
+	"authors" : [{
+			"name" : "Raghavendra K R",
+			"email" : "raghavendra@icircle.co.in",
+			"homepage" : "http://krraghavendra.in",
+			"role" : "Developer"
+		}
+	],
+	"keywords" : [
+		"icircle",
+		"ux",
+		"user experience"
+	],
+	"require" : {
+		"twbs/bootstrap" : "~3.3.7",
+		"nodejs-php-fallback/uglify" : "~1.0.1",
+		"nodejs-php-fallback/less" : "~1.0.0",
+		"composer/composer" : "1.2.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"icircle\\" : "src"
+		}
+	},
+	"bin" : ["bin/icwebconsole"],
+	"scripts" : {
+	    "clean" : "icwebconsole clean dist",
+		"build" : "icwebconsole build"
+	}
+}
