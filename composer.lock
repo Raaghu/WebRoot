@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8bafab66adc6f4f273cf99af980fda4",
-    "content-hash": "b12c9b708201f79d1a8c4ca5d909980a",
+    "hash": "57dc16690f4be4935e1d02ad8bd7405c",
+    "content-hash": "42ee901891e5c21f7b4afe4e0bd5bf78",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -298,6 +298,41 @@
             "time": "2015-10-10 12:58:30"
         },
         {
+            "name": "jms/composer-deps-analyzer",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/composer-deps-analyzer.git",
+                "reference": "912227ebdca09ca8bd67509645ac6318a136aa46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/composer-deps-analyzer/zipball/912227ebdca09ca8bd67509645ac6318a136aa46",
+                "reference": "912227ebdca09ca8bd67509645ac6318a136aa46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "dev-master",
+                "symfony/filesystem": "2.1.*",
+                "symfony/process": "2.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JMS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "description": "Builds a Dependency Graph from a composer.json file",
+            "time": "2013-05-15 18:04:27"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "dev-master",
             "source": {
@@ -457,16 +492,16 @@
         },
         {
             "name": "nodejs-php-fallback/nodejs-php-fallback",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kylekatarnls/nodejs-php-fallback.git",
-                "reference": "cfc3f8689a4b3784ee37af029fb0d66f6122321e"
+                "reference": "49a7fc634ef84e32c1d6adf2ca8f8a7f09c399d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kylekatarnls/nodejs-php-fallback/zipball/cfc3f8689a4b3784ee37af029fb0d66f6122321e",
-                "reference": "cfc3f8689a4b3784ee37af029fb0d66f6122321e",
+                "url": "https://api.github.com/repos/kylekatarnls/nodejs-php-fallback/zipball/49a7fc634ef84e32c1d6adf2ca8f8a7f09c399d3",
+                "reference": "49a7fc634ef84e32c1d6adf2ca8f8a7f09c399d3",
                 "shasum": ""
             },
             "require": {
@@ -495,7 +530,7 @@
                 }
             ],
             "description": "Allow you to call node.js module or scripts throught PHP and call a fallback function if node.js is not available",
-            "time": "2016-07-25 15:35:05"
+            "time": "2016-07-30 14:19:35"
         },
         {
             "name": "nodejs-php-fallback/uglify",

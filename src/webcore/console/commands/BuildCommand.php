@@ -6,6 +6,9 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputOption;
+use NodejsPhpFallback\Less;
+use NodejsPhpFallback\NodejsPhpFallback;
+use Composer\Autoload\ClassLoader;
 
 class BuildCommand extends Command {
 	
@@ -18,18 +21,21 @@ class BuildCommand extends Command {
 	
 	protected function execute(InputInterface $input,OutputInterface $output){
 		
-	}
-	
-	private function deleteFile($path){
-		if(is_dir($path)){
-			$children = array_diff(scandir($path),array(".",".."));
-			foreach ($children as $child){
-				$this->deleteFile($path.'/'.$child);
-			}
-			rmdir($path);
-		}else{
-			unlink($path);
+		$reflectionClasss = new \ReflectionClass('Composer\Autoload\ClassLoader');
+		$classLoaderPath = $reflectionClasss->getFileName();
+		$venderDir = $classLoaderPath;
+		while (basename($venderDir) != "vendor"){
+			$venderDir = dirname($venderDir);
 		}
+		
+		$packageHome = dirname($venderDir);
+		
+		$distDir = $packageHome."/dist";
+		
+		echo $distDir;
+		
+		
+		
 	}
 	
 }

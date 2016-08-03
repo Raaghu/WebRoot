@@ -19,17 +19,30 @@
 	],
 	"require" : {
 		"twbs/bootstrap" : "~3.3.7",
+		"nodejs-php-fallback/nodejs-php-fallback" : "~1.2.4",
 		"nodejs-php-fallback/uglify" : "~1.0.1",
 		"nodejs-php-fallback/less" : "~1.0.0",
-		"composer/composer" : "1.2.0"
+		"composer/composer" : "1.2.0",
+		"jms/composer-deps-analyzer" : "0.1.0"
 	},
 	"autoload" : {
 		"psr-4" : {
 			"icircle\\" : "src"
 		}
 	},
+	"extra": {
+	    "npm": {
+	        "gulp": "~3.9.0"
+	    }
+	},
 	"bin" : ["bin/icwebconsole"],
 	"scripts" : {
+	    "post-install-cmd": [
+	        "NodejsPhpFallback\\NodejsPhpFallback::install"
+	    ],
+	    "post-update-cmd": [
+	        "NodejsPhpFallback\\NodejsPhpFallback::install"
+	    ],
 	    "clean" : "icwebconsole clean dist",
 		"build" : "icwebconsole build"
 	}

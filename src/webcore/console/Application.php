@@ -7,6 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Composer\IO\ConsoleIO;
 use icircle\webcore\console\commands\CleanCommand;
+use icircle\webcore\console\commands\BuildCommand;
 
 class Application extends SymfonyApplication {
 	
@@ -21,6 +22,7 @@ class Application extends SymfonyApplication {
 	
 	protected function registerCommands(){
 		$this->add(new CleanCommand());
+		$this->add(new BuildCommand());
 	}
 	
 }
