@@ -1,49 +1,56 @@
 {
-	"name" : "icircle/webcore",
-	"description" : "This is a Core Project for all UI projects",
-	"type" : "library",
-	"homepage" : "http://icircle.xyz/developer/webcore",
-	"license" : "icircle",
-	"minimum-stability" : "dev",
-	"authors" : [{
-			"name" : "Raghavendra K R",
-			"email" : "raghavendra@icircle.co.in",
-			"homepage" : "http://krraghavendra.in",
-			"role" : "Developer"
-		}
-	],
-	"keywords" : [
-		"icircle",
-		"ux",
-		"user experience"
-	],
-	"require" : {
-		"twbs/bootstrap" : "~3.3.7",
-		"nodejs-php-fallback/nodejs-php-fallback" : "~1.2.4",
-		"nodejs-php-fallback/uglify" : "~1.0.1",
-		"nodejs-php-fallback/less" : "~1.0.0",
-		"composer/composer" : "1.2.0",
-		"jms/composer-deps-analyzer" : "0.1.0"
-	},
-	"autoload" : {
-		"psr-4" : {
-			"icircle\\" : "src"
-		}
-	},
-	"extra": {
-	    "npm": {
-	        "gulp": "~3.9.0"
-	    }
-	},
-	"bin" : ["bin/icwebconsole"],
-	"scripts" : {
-	    "post-install-cmd": [
-	        "NodejsPhpFallback\\NodejsPhpFallback::install"
-	    ],
-	    "post-update-cmd": [
-	        "NodejsPhpFallback\\NodejsPhpFallback::install"
-	    ],
-	    "clean" : "icwebconsole clean dist",
-		"build" : "icwebconsole build"
-	}
+    "name" : "icircle/webcore",
+    "description" : "This is a Core Project for all UI projects",
+    "type" : "library",
+    "homepage" : "http://icircle.xyz/developer/webcore",
+    "license" : "icircle",
+    "minimum-stability" : "dev",
+    "authors" : [{
+            "name" : "Raghavendra K R",
+            "email" : "raghavendra@icircle.co.in",
+            "homepage" : "http://krraghavendra.in",
+            "role" : "Developer"
+        }
+    ],
+    "keywords" : [
+        "icircle",
+        "ux",
+        "user experience"
+    ],
+    "require" : {
+        "twbs/bootstrap" : "~3.3.7",
+        "nodejs-php-fallback/nodejs-php-fallback" : "~1.2.4",
+        "nodejs-php-fallback/uglify" : "~1.0.1",
+        "nodejs-php-fallback/less" : "~1.0.0",
+        "composer/composer" : "1.2.0",
+        "jms/composer-deps-analyzer" : "0.1.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "icircle\\" : "src"
+        }
+    },
+    "extra": {
+        "npm": {
+            "gulp": "~3.9.0"
+        },
+        "web":{
+            "compilers":{
+                "less":{
+                    "css/theme.css":["less/theme.less"]
+                }
+            }
+        }
+    },
+    "bin" : ["bin/icwebconsole"],
+    "scripts" : {
+        "post-install-cmd": [
+            "NodejsPhpFallback\\NodejsPhpFallback::install"
+        ],
+        "post-update-cmd": [
+            "NodejsPhpFallback\\NodejsPhpFallback::install"
+        ],
+        "clean" : "icwebconsole clean dist",
+        "build" : "icwebconsole build"
+    }
 }
