@@ -37,7 +37,8 @@
         "web":{
             "compilers":{
                 "less":{
-                    "css/theme.css":["less/theme.less"]
+                    "css/bootstrap.theme.css":["less/theme.less"],
+                    "css/bootstrap.css":["../vendor/twbs/bootstrap/less/bootstrap.less"]
                 }
             }
         }
